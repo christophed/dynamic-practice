@@ -39,7 +39,7 @@ int solve_knapsack(int *list, unsigned int size, int weight)
         MEMOIZED[i][w] = MEMOIZED[i-1][w];
       } else {
         MEMOIZED[i][w] = 
-          MAX(MEMOIZED[i-1][w], MEMOIZED[i-1][w-el_weight] + 1);
+          MAX(MEMOIZED[i-1][w], MEMOIZED[i-1][w-el_weight] + el_weight);
       }
     }
   }
